@@ -1,9 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.navigation.safeargs) //导航组件 SafeArgs 插件 ,不使用navigation的话，这个插件可以不导入
 }
 
 android {
@@ -69,14 +67,7 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.multidex)
     implementation(libs.androidx.swiperefreshlayout)
-    implementation(libs.androidx.preference.ktx)
-    //暂时弃用
-    implementation(libs.androidx.splashscreen)
-    // JetpackMvvm 框架不再引入navigation，大家想用navigation的话就自己引入，我这里是历史遗留原因demo之前用的是navigation，所以还是示例引入了
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
 
     //项目核心框架
     implementation(project(":JetpackMvvm"))
@@ -85,12 +76,12 @@ dependencies {
     //网络请求，JetpackMvvm 框架不再内置引入网络框架，大家可以自行选择Retrofit或者其他优秀的第三方网络框架 比如RxHttp，Net等
     //================================网络框架 sart ===========================//
 
-    // rxhttp示例引入((me.hgj.jetpackmvvm.demo.app.core.net.rxhttp 包中))
+    // rxhttp示例引入((demo.app.core.net.rxhttp 包中))
     implementation(libs.okhttp) //必须
     implementation(libs.rxhttp)
     ksp(libs.rxhttp.compiler)
 
-    //retrofit示例(me.hgj.jetpackmvvm.demo.app.core.net.retrofit 包中)
+    //retrofit示例(demo.app.core.net.retrofit 包中)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     //================================网络框架 end ===========================//
@@ -103,12 +94,6 @@ dependencies {
     implementation(libs.lottie)
     //指示器库
     implementation(libs.magicindicator)
-    //加载webview
-    implementation(libs.agentweb)
-    implementation(libs.filechooser)
-    implementation(libs.downloader)
-    //RevealLayout 收藏的 红心
-    implementation(libs.reveallayout)
     //屏幕适配
     implementation(libs.autosize)
     //防崩溃

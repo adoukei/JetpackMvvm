@@ -6,18 +6,14 @@ import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.core.ext.bindViewPager2
 import me.hgj.jetpackmvvm.demo.app.core.ext.init
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.util.UserManager
 import me.hgj.jetpackmvvm.demo.databinding.FragmentViewpagerBinding
-import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
 import me.hgj.jetpackmvvm.demo.data.vm.TreeViewModel
 import me.hgj.jetpackmvvm.demo.ui.activity.LoginActivity
 import me.hgj.jetpackmvvm.ext.util.intent.openActivity
 import me.hgj.jetpackmvvm.ext.util.statusPadding
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/2
  * 描述　: 广场模块父Fragment管理四个子fragment
  */
 class TreeArrFragment : BaseFragment<TreeViewModel, FragmentViewpagerBinding>() {
@@ -50,7 +46,7 @@ class TreeArrFragment : BaseFragment<TreeViewModel, FragmentViewpagerBinding>() 
                 when (it.itemId) {
                     R.id.todo_add -> {
                         if(UserManager.isLoggedIn){
-                           nav().navigate(MainFragmentDirections.toAddArticleFragment())
+
                         }else{
                             openActivity<LoginActivity>()
                         }

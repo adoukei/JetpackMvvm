@@ -6,8 +6,7 @@ import me.hgj.jetpackmvvm.core.net.LoadStatusEntity
 import me.hgj.jetpackmvvm.core.net.LoadingEntity
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/24
+ *
  * 描述　：BaseViewModel基类
  */
 open class BaseViewModel : ViewModel() {

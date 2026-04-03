@@ -10,8 +10,7 @@ import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/11/18
+ *
  * 说明　：
  */
 class UnwrapConverterFactory() : Converter.Factory() {

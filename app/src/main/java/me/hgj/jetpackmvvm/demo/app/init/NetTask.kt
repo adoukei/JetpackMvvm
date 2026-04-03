@@ -5,8 +5,7 @@ import me.hgj.jetpackmvvm.core.init.BaseInitTask
 import me.hgj.jetpackmvvm.demo.app.core.net.rxhttp.RxHttpInit
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/29
+ *
  * 说明　：
  */
 class NetTask : BaseInitTask() {

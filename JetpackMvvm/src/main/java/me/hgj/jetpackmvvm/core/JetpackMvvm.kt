@@ -2,7 +2,6 @@ package me.hgj.jetpackmvvm.core
 
 import android.app.Application
 import android.view.Gravity
-import com.hjq.toast.Toaster
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
@@ -19,12 +18,6 @@ import me.hgj.jetpackmvvm.widget.loadsir.core.LoadSir
 import me.hgj.jetpackmvvm.widget.state.BaseEmptyCallback
 import me.hgj.jetpackmvvm.widget.state.BaseErrorCallback
 import me.hgj.jetpackmvvm.widget.state.BaseLoadingCallback
-
-/**
- * 作者　: hegaojian
- * 时间　: 2022/1/13
- * 描述　:
- */
 
 /**
  * 全局上下文，可直接拿
@@ -63,8 +56,7 @@ object JetpackMvvm {
             .setLoadingCallBack(BaseLoadingCallback())
             .setDefaultCallback(SuccessCallback::class.java)
             .commit()
-        Toaster.init(app)
-        Toaster.setGravity(Gravity.BOTTOM, 0, 100.dp)
+
 
         SmartRefreshLayout.setDefaultRefreshInitializer { context, layout ->
             //设置 SmartRefreshLayout 通用配置

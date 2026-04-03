@@ -1,5 +1,6 @@
 package me.hgj.jetpackmvvm.demo.ui.fragment.collect
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.drake.brv.utils.setup
@@ -26,8 +27,6 @@ import me.hgj.jetpackmvvm.ext.view.vertical
 import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/10
  * 描述　: 收藏的文章集合Fragment
  */
 class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRecyclerviewBinding,CollectResponse>() {
@@ -52,7 +51,7 @@ class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRec
                 getBindingOrNull<ItemAriticleBinding>()?.run {
                     itemHomeCollect.setOnCollectViewClickListener(object :
                         CollectView.OnCollectViewClickListener {
-                        override fun onClick(v: CollectView) {
+                        override fun onClick(v: View) {
                             val model = getModel<CollectResponse>()
                             mViewModel.unCollectOnCollect(model.id,model.originId).obs(this@CollectArticleFragment){
                                 onSuccess {
@@ -64,7 +63,7 @@ class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRec
                                     EventViewModel.collectEvent.value = CollectBus(model.originId, false)
                                 }
                                 onError {
-                                    v.isChecked = true
+
                                     it.msg.toast()
                                 }
                             }
@@ -75,7 +74,7 @@ class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRec
                 getBindingOrNull<ItemProjectBinding>()?.run {
                     itemProjectCollect.setOnCollectViewClickListener(object :
                         CollectView.OnCollectViewClickListener {
-                        override fun onClick(v: CollectView) {
+                        override fun onClick(v: View) {
                             val model = getModel<CollectResponse>()
                             mViewModel.unCollectArticle(model.id).obs(this@CollectArticleFragment) {
                                 onSuccess {
@@ -87,7 +86,7 @@ class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRec
                                     EventViewModel.collectEvent.value = CollectBus(model.id, false)
                                 }
                                 onError {
-                                    v.isChecked = true
+
                                     it.msg.toast()
                                 }
                             }
@@ -110,7 +109,6 @@ class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRec
                     itemHomeContent.text = model.title.toHtml()
                     itemHomeType2.text = model.chapterName.toHtml()
                     itemHomeDate.text = model.niceDate
-                    itemHomeCollect.isChecked = true
                     itemHomeNew.gone()
                     itemHomeTop.gone()
                     itemHomeType1.gone()
@@ -126,7 +124,6 @@ class CollectArticleFragment : BasePageListFragment<CollectViewModel, IncludeRec
                     itemProjectNew.gone()
                     itemProjectTop.gone()
                     itemProjectType1.gone()
-                    itemProjectCollect.isChecked = true
                     itemProjectImageview.load(model.envelopePic)
                 }
             }

@@ -10,12 +10,7 @@ import java.util.List;
 import me.hgj.jetpackmvvm.widget.loadsir.callback.Callback;
 import me.hgj.jetpackmvvm.widget.loadsir.callback.SuccessCallback;
 
-/**
- * Description:TODO
- * Create Time:2017/9/6 10:05
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
+
 public class LoadService<T> {
     private final String TAG = getClass().getSimpleName();
     private LoadLayout loadLayout;

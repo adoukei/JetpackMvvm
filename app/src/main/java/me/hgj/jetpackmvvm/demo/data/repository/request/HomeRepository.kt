@@ -9,8 +9,7 @@ import rxhttp.wrapper.param.RxHttp
 import rxhttp.wrapper.param.toAwaitResponse
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/29
+ *
  * 说明　：
  */
 object HomeRepository {

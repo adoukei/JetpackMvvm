@@ -17,8 +17,7 @@ import me.hgj.jetpackmvvm.base.vm.BaseViewModel
 import kotlin.also
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/17
+ *
  * 说明　：
  */
 

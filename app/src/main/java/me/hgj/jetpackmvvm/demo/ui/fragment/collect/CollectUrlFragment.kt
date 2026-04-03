@@ -22,8 +22,7 @@ import me.hgj.jetpackmvvm.ext.view.vertical
 import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/10
+
  * 描述　: 收藏的文章集合Fragment
  */
 class CollectUrlFragment : BaseListFragment<CollectViewModel, IncludeRecyclerviewBinding,CollectUrlResponse>() {
@@ -48,7 +47,7 @@ class CollectUrlFragment : BaseListFragment<CollectViewModel, IncludeRecyclervie
                 getBindingOrNull<ItemCollecturlBinding>()?.run {
                     itemCollectUrlCollect.setOnCollectViewClickListener(object :
                         CollectView.OnCollectViewClickListener {
-                        override fun onClick(v: CollectView) {
+                        override fun onClick(v: View) {
                             val model = getModel<CollectUrlResponse>()
                             mViewModel.unCollectUrl(model.id).obs(this@CollectUrlFragment){
                                 onSuccess {
@@ -59,7 +58,7 @@ class CollectUrlFragment : BaseListFragment<CollectViewModel, IncludeRecyclervie
                                     }
                                 }
                                 onError {
-                                    v.isChecked = true
+
                                     it.msg.toast()
                                 }
                             }
@@ -73,7 +72,6 @@ class CollectUrlFragment : BaseListFragment<CollectViewModel, IncludeRecyclervie
                 val binding = getBinding<ItemCollecturlBinding>()
                 binding.itemCollectUrlName.text = model.name
                 binding.itemCollectUrlLink.text = model.link
-                binding.itemCollectUrlCollect.isChecked = true
             }
             onClick(R.id.item_collect_url_root) {
                 WebActivity.start(collectUrl = getModel<CollectUrlResponse>())

@@ -4,8 +4,7 @@ import me.hgj.jetpackmvvm.demo.data.model.entity.ArticleResponse
 import retrofit2.http.GET
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/11/18
+ *
  * 说明　：
  */
 interface ApiService {

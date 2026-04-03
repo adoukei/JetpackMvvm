@@ -14,12 +14,7 @@ import me.hgj.jetpackmvvm.widget.loadsir.LoadSirUtil;
 import me.hgj.jetpackmvvm.widget.loadsir.callback.Callback;
 import me.hgj.jetpackmvvm.widget.loadsir.callback.SuccessCallback;
 
-/**
- * Description:TODO
- * Create Time:2017/9/2 17:02
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
+
 
 public class LoadLayout extends FrameLayout {
     private final String TAG = getClass().getSimpleName();

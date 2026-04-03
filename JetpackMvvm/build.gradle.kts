@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.maven.publish)
 }
 
@@ -26,19 +25,6 @@ android {
     }
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.hegaojian"
-                artifactId = "JetpackMvvm"
-                version = "2.0.3"
-            }
-        }
-    }
-}
-
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -60,10 +46,6 @@ dependencies {
     // liveData
     api(libs.androidx.lifecycle.livedata.ktx)
 
-    //Toast，使用可在任意地方 message.toast()
-    api(libs.toaster)
-    //log
-    api(libs.log)
     //json数据解析，框架封装可看 GsonExt 类
     api(libs.gson)
     api(libs.dialog)

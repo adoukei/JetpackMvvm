@@ -7,7 +7,6 @@ import com.drake.brv.utils.setup
 import me.hgj.jetpackmvvm.core.data.ApiResult
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BasePageListFragment
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.data.model.entity.ApiPagerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.IntegralResponse
@@ -23,8 +22,6 @@ import me.hgj.jetpackmvvm.ext.view.vertical
 import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/2
  * 描述　: 积分排行
  */
 class IntegralFragment : BasePageListFragment<IntegralViewModel, FragmentIntegralBinding,IntegralResponse>() {
@@ -46,7 +43,7 @@ class IntegralFragment : BasePageListFragment<IntegralViewModel, FragmentIntegra
                     }
 
                     R.id.integral_history -> {
-                        nav().navigate(IntegralFragmentDirections.toIntegralHistoryFragment())
+
                     }
                 }
                 true

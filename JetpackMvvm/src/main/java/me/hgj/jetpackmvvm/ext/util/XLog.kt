@@ -1,18 +1,9 @@
 package me.hgj.jetpackmvvm.ext.util
 
 import com.google.gson.Gson
-import com.socks.library.klog.BaseLog
-import com.socks.library.klog.JsonLog
-import com.socks.library.klog.XmlLog
-import me.hgj.jetpackmvvm.core.net.interception.logging.util.LogUtils
 import java.io.PrintWriter
 import java.io.StringWriter
 
-/**
- * 作者　: hegaojian
- * 时间　: 2021/8/10
- * 描述　:
- */
 
 object XLog {
 
@@ -169,7 +160,8 @@ object XLog {
         val tag = contents[0]
         val msg = contents[1]
         val headString = contents[2]
-        BaseLog.printDefault(D, tag, headString + msg)
+        //打印日志
+//        BaseLog.printDefault(D, tag, headString + msg)
     }
 
     private fun printLog(
@@ -184,12 +176,13 @@ object XLog {
         val tag = contents[0]
         val msgValue = contents[1]
         val headString = contents[2]
-        when (type) {
-            V, D, I, W, E, A -> BaseLog.printDefault(type, tag, headString + msgValue)
-            JSON -> JsonLog.printJson(tag, msgValue, headString)
-            XML -> XmlLog.printXml(tag, msgValue, headString)
-            else -> BaseLog.printDefault(type, tag, headString + msgValue)
-        }
+        //打印日志
+//        when (type) {
+//            V, D, I, W, E, A -> BaseLog.printDefault(type, tag, headString + msgValue)
+//            JSON -> JsonLog.printJson(tag, msgValue, headString)
+//            XML -> XmlLog.printXml(tag, msgValue, headString)
+//            else -> BaseLog.printDefault(type, tag, headString + msgValue)
+//        }
     }
 
     fun logType(type: Int, tag: String?, stackTraceIndex: Int, msg: Any?) {

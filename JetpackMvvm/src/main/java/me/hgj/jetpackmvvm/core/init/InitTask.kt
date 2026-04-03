@@ -3,8 +3,7 @@ package me.hgj.jetpackmvvm.core.init
 import android.app.Application
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/29
+ *
  * 说明　：
  */
 /**

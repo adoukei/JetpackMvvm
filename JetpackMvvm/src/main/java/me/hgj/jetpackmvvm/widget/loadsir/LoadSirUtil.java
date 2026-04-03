@@ -7,12 +7,6 @@ import java.util.List;
 import me.hgj.jetpackmvvm.widget.loadsir.target.ITarget;
 
 
-/**
- * Description:TODO
- * Create Time:2017/9/4 16:24
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
 public class LoadSirUtil {
 
     public static boolean isMainThread() {

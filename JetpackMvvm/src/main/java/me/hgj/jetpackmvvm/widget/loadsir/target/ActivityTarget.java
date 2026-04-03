@@ -9,12 +9,7 @@ import me.hgj.jetpackmvvm.widget.loadsir.callback.SuccessCallback;
 import me.hgj.jetpackmvvm.widget.loadsir.core.LoadLayout;
 
 
-/**
- * Description:TODO
- * Create Time:2019/8/29 0029 下午 2:44
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
+
 public class ActivityTarget implements ITarget {
 
     @Override

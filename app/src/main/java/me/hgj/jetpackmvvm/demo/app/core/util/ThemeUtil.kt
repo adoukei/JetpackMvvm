@@ -4,8 +4,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import me.hgj.jetpackmvvm.demo.data.model.CacheConfig
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/11/4
+ *
  * 说明　：
  */
 object ThemeUtil {

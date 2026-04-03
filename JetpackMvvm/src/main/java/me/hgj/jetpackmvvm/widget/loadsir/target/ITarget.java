@@ -4,12 +4,7 @@ package me.hgj.jetpackmvvm.widget.loadsir.target;
 import me.hgj.jetpackmvvm.widget.loadsir.callback.Callback;
 import me.hgj.jetpackmvvm.widget.loadsir.core.LoadLayout;
 
-/**
- * Description:TODO
- * Create Time:2019/8/29 0029 下午 2:43
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
+
 public interface ITarget {
     /**
      *

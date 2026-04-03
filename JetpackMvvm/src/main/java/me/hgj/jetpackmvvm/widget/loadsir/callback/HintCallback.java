@@ -13,12 +13,7 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.StyleRes;
 
 
-/**
- * Description:TODO
- * Create Time:2017/10/9 14:12
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
+
 public class HintCallback extends Callback {
 
     private String title;

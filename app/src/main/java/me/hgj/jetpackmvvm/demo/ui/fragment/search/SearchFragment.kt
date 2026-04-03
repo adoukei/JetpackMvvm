@@ -14,7 +14,6 @@ import me.hgj.jetpackmvvm.core.data.obs
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.core.ext.initClose
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.util.LocalDataUtil
 import me.hgj.jetpackmvvm.demo.data.model.entity.SearchResponse
 import me.hgj.jetpackmvvm.demo.databinding.FlowLayoutBinding
@@ -27,8 +26,6 @@ import me.hgj.jetpackmvvm.ext.view.showDialogMessage
 import me.hgj.jetpackmvvm.ext.view.vertical
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/2/29
  * 描述　:
  */
 
@@ -74,7 +71,7 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>() {
             R.id.history_root.onClick {
                 val key = getModel<String>()
                 updateKey(key)
-                nav().navigate(SearchFragmentDirections.toSearchResultFragment(key))
+
             }
         }.models = mViewModel.historyCacheData
     }
@@ -91,7 +88,7 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>() {
             R.id.flow_tag.onClick {
                 val key = getModel<SearchResponse>().name
                 updateKey(key)
-                nav().navigate(SearchFragmentDirections.toSearchResultFragment(key))
+
             }
         }
     }
@@ -114,7 +111,9 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>() {
     private fun initToolbar() {
         baseBinding.includeToolbar.toolbar.run {
             mActivity.setSupportActionBar(this)
-            initClose { nav().navigateUp() }
+            initClose {
+
+            }
         }
     }
 
@@ -155,7 +154,7 @@ class SearchFragment : BaseFragment<SearchViewModel, FragmentSearchBinding>() {
                         override fun onQueryTextSubmit(query: String?): Boolean {
                             query?.takeIf { it.isNotBlank() }?.let { queryStr ->
                                 updateKey(queryStr)
-                                nav().navigate(SearchFragmentDirections.toSearchResultFragment(queryStr))
+
                             }
                             clearFocus()
                             return true

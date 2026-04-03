@@ -63,32 +63,4 @@ object LocalDataUtil {
         }
     }
 
-    /**
-     * 开源项目集合
-     */
-    fun openSourceProjects(): ArrayList<BannerResponse> {
-        val arrayList = arrayListOf<BannerResponse>()
-        arrayList.add(BannerResponse("JetpackMvvm", "https://github.com/hegaojian/JetpackMvvm"))
-        arrayList.add(BannerResponse("rxhttp", "https://github.com/liujingxing/rxhttp"))
-        arrayList.add(BannerResponse("BRV", "https://github.com/liangjingkanji/BRV"))
-        arrayList.add(BannerResponse("KLog", "https://github.com/ZhaoKaiQiang/KLog"))
-        arrayList.add(BannerResponse("MMKV", "https://github.com/Tencent/MMKV"))
-        arrayList.add(BannerResponse("Toaster", "https://github.com/getActivity/Toaster"))
-        arrayList.add(BannerResponse("XXPermissions", "https://github.com/getActivity/XXPermissions"))
-        arrayList.add(BannerResponse("glide", "https://github.com/bumptech/glide"))
-        arrayList.add(BannerResponse("lottie", "https://github.com/airbnb/lottie-android"))
-        arrayList.add(BannerResponse("LoadSir", "https://github.com/KingJA/LoadSir"))
-        arrayList.add(BannerResponse("material-dialogs", "https://github.com/afollestad/material-dialogs"))
-        arrayList.add(BannerResponse("SmartRefreshLayout", "https://github.com/scwang90/SmartRefreshLayout"))
-        arrayList.add(BannerResponse("BackgroundLibrary", "https://github.com/JavaNoober/BackgroundLibrary"))
-        arrayList.add(BannerResponse("UnPeek-LiveData", "https://github.com/KunMinX/UnPeek-LiveData"))
-        arrayList.add(BannerResponse("ImmersionBar", "https://github.com/gyf-dev/ImmersionBar"))
-        arrayList.add(BannerResponse("BannerViewPager", "https://github.com/zhpanvip/BannerViewPager"))
-        arrayList.add(BannerResponse("MagicIndicator", "https://github.com/hackware1993/MagicIndicator"))
-        arrayList.add(BannerResponse("AgentWeb", "https://github.com/Justson/AgentWeb"))
-        arrayList.add(BannerResponse("CustomActivityOnCrash", "https://github.com/Ereza/CustomActivityOnCrash"))
-        arrayList.add(BannerResponse("RevealLayout", "https://github.com/goweii/RevealLayout"))
-        return arrayList
-    }
-
 }

@@ -6,8 +6,7 @@ import me.hgj.jetpackmvvm.demo.data.repository.request.PlazaRepository
 import me.hgj.jetpackmvvm.core.net.LoadingType
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/30
+ *
  * 描述　：
  */
 class TreeViewModel : BaseViewModel() {

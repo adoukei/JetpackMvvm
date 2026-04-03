@@ -1,6 +1,6 @@
 package me.hgj.jetpackmvvm.ext.util
 
-import com.hjq.toast.Toaster
+import android.util.Log
 
 
 fun Any?.logV(tag: String? = null) =
@@ -28,5 +28,5 @@ fun String?.logJson(tag: String? = null) =
     XLog.logXmlOrJson(XLog.JSON, tag, XLog.STACK_TRACE_INDEX_7, this)
 
 fun String?.toast(){
-    Toaster.show(this)
+    Log.e("我的项目","toast暂未实现")
 }

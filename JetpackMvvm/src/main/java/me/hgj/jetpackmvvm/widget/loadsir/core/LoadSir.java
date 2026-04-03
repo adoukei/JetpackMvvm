@@ -12,12 +12,7 @@ import me.hgj.jetpackmvvm.widget.loadsir.target.ActivityTarget;
 import me.hgj.jetpackmvvm.widget.loadsir.target.ITarget;
 import me.hgj.jetpackmvvm.widget.loadsir.target.ViewTarget;
 
-/**
- * Description:TODO
- * Create Time:2017/9/2 16:36
- * Author:KingJA
- * Email:kingjavip@gmail.com
- */
+
 public class LoadSir {
     private static volatile LoadSir loadSir;
     private Builder builder;

@@ -5,8 +5,6 @@ import me.hgj.jetpackmvvm.core.data.obs
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.core.ext.joinQQGroup
-import me.hgj.jetpackmvvm.demo.app.core.ext.jumpByLogin
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.ext.onRefresh
 import me.hgj.jetpackmvvm.demo.app.core.util.LocalDataUtil
 import me.hgj.jetpackmvvm.demo.app.core.util.UserManager
@@ -16,7 +14,6 @@ import me.hgj.jetpackmvvm.demo.data.vm.UserViewModel
 import me.hgj.jetpackmvvm.demo.databinding.FragmentMeBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.SettingActivity
 import me.hgj.jetpackmvvm.demo.ui.activity.WebActivity
-import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
 import me.hgj.jetpackmvvm.ext.lifecycle.getViewModel
 import me.hgj.jetpackmvvm.ext.util.clickNoRepeat
 import me.hgj.jetpackmvvm.ext.util.intent.openActivity
@@ -24,8 +21,6 @@ import me.hgj.jetpackmvvm.ext.util.loadCircle
 import me.hgj.jetpackmvvm.ext.util.statusPadding
 
 /**
- * 作者　: hegaojian
- * 时间　: 2019/12/23
  * 描述　: 我的
  */
 
@@ -53,33 +48,27 @@ class MeFragment : BaseFragment<UserViewModel, FragmentMeBinding>() {
     override fun onBindViewClick() {
         super.onBindViewClick()
         mBind.topLayout.clickNoRepeat {
-            nav().jumpByLogin()
+
         }
         mBind.integralLayout.clickNoRepeat {
             //我的积分
-            nav().jumpByLogin {
-                it.navigate(MainFragmentDirections.toIntegralFragment(integralVm.integralData))
-            }
+
         }
         mBind.collectLayout.clickNoRepeat {
             //我的收藏
-            nav().jumpByLogin {
-                it.navigate(MainFragmentDirections.toCollectFragment())
-            }
+
         }
         mBind.articleLayout.clickNoRepeat {
             //我的文章
-            nav().jumpByLogin {
-                it.navigate(MainFragmentDirections.toArticleFragment())
-            }
+
         }
         mBind.urlLayout.clickNoRepeat {
             //开源网站
-            WebActivity.start(title = "玩Android网站", url = "https://www.wanandroid.com/")
+            WebActivity.start(title = "网站标题", url = "网站url")
         }
         mBind.joinLayout.clickNoRepeat {
             //加入我们
-            joinQQGroup("9n4i5sHt4189d4DvbotKiCHy-5jZtD4D")
+            joinQQGroup("这里是QQ群的key")
         }
         mBind.settingLayout.clickNoRepeat {
             //设置

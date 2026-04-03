@@ -6,12 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import kotlin.collections.forEach
 
-/**
- * 作者　: hegaojian
- * 时间　: 2020/11/18
- * 描述　:
- */
-
 
 fun View.click(action: (view: View) -> Unit) {
     setOnClickListener {

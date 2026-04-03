@@ -25,7 +25,6 @@
     <string name="author">author</string>
     <string name="author_name">An Android developer who has been practicing for two and a half years→_→</string>
     <string name="project_address">project source code</string>
-    <string name="github_url">https://github.com/hegaojian/JetpackMvvm</string>
     <string name="open_project">special thanks</string>
     <string name="open_project_tips">open source libraries used in the project</string>
     <string name="error_occurred">Sorry, the app crashed. \n Please take the copied error log to the author and ask them to V you 50</string>

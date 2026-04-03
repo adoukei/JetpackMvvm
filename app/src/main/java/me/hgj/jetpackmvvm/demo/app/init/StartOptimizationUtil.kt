@@ -3,13 +3,10 @@ package me.hgj.jetpackmvvm.demo.app.init
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import me.hgj.jetpackmvvm.core.init.InitTaskManager
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/11/4
+ *
  * 说明　：根据 https://mp.weixin.qq.com/s/38jiajcoaqn8uVnSy68RuQ 文章方案编写的启动优化，结合本框架InitTaskManager实现
  * 可以在启动的同时 加载首页，给用户视觉上带来极快的启动速度体验。
  * 注意：此方案只适合启动页设计为比较简单的项目 且 android12以上的设备
@@ -53,15 +50,15 @@ object StartOptimizationUtil {
      * 安装启动屏幕
      */
     fun installSplashScreen(activity: AppCompatActivity){
-        val splashScreen: SplashScreen = activity.installSplashScreen()
-        //给启动页面做渐变消失效果过渡到主页
-        splashScreen.setOnExitAnimationListener { splashView ->
-            splashView.view.animate()
-                .alpha(0f)
-                .setDuration(500)
-                .withEndAction { splashView.remove() }
-                .start()
-        }
+//        val splashScreen: SplashScreen = activity.installSplashScreen()
+//        //给启动页面做渐变消失效果过渡到主页
+//        splashScreen.setOnExitAnimationListener { splashView ->
+//            splashView.view.animate()
+//                .alpha(0f)
+//                .setDuration(500)
+//                .withEndAction { splashView.remove() }
+//                .start()
+//        }
     }
 
     /**

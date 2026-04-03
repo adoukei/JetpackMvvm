@@ -7,8 +7,6 @@ import java.util.*
 
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/10
  * 描述　: 时间工具类
  */
 

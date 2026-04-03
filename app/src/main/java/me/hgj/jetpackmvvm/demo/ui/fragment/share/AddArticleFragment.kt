@@ -8,7 +8,6 @@ import me.hgj.jetpackmvvm.core.data.obs
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseFragment
 import me.hgj.jetpackmvvm.demo.app.event.EventViewModel
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.util.UserManager
 import me.hgj.jetpackmvvm.demo.databinding.FragmentShareAriticleBinding
 import me.hgj.jetpackmvvm.demo.data.vm.ShareViewModel
@@ -18,8 +17,6 @@ import me.hgj.jetpackmvvm.ext.view.textString
 
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/10
  * 描述　:
  */
 class AddArticleFragment : BaseFragment<ShareViewModel, FragmentShareAriticleBinding>() {
@@ -65,7 +62,7 @@ class AddArticleFragment : BaseFragment<ShareViewModel, FragmentShareAriticleBin
                             mViewModel.addShareArticle(shareTitle,shareUrl).obs(viewLifecycleOwner) {
                                 onSuccess {
                                     EventViewModel.shareArticleEvent.value = true
-                                    nav().navigateUp()
+
                                 }
                                 onError {
                                     showDialogMessage(it.msg)

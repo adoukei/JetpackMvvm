@@ -1,21 +1,18 @@
 package me.hgj.jetpackmvvm.demo.ui.activity
 
 import android.content.Intent
-import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.webkit.WebResourceError
+import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
-import android.widget.LinearLayout
+import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuProvider
-import com.just.agentweb.AgentWeb
-import com.just.agentweb.WebViewClient
 import me.hgj.jetpackmvvm.core.data.obs
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseActivity
@@ -39,18 +36,11 @@ import me.hgj.jetpackmvvm.ext.util.intent.bundle
 import me.hgj.jetpackmvvm.ext.util.intent.openActivity
 
 
-/**
- * 作者　: hegaojian
- * 时间　: 2020/3/3
- * 描述　:
- */
 class WebActivity : BaseActivity<WebViewModel, ActivityWebBinding>() {
 
     override val showTitle = true
 
-    private var mAgentWeb: AgentWeb? = null
-
-    private var preWeb: AgentWeb.PreAgentWeb? = null
+    private lateinit var webView: WebView
 
     val article: ArticleResponse? by bundle()
 
@@ -134,15 +124,12 @@ class WebActivity : BaseActivity<WebViewModel, ActivityWebBinding>() {
             setSupportActionBar(this)
             initClose(mViewModel.showTitle) {
                 hideSoftKeyboard(this@WebActivity)
-                mAgentWeb?.let { web ->
-                    if (web.webCreator.webView.canGoBack()) {
-                        web.webCreator.webView.goBack()
-                    } else {
-                        finish()
-                    }
-                }
+                finish()
             }
         }
+
+        // 初始化WebView
+        initWebView()
 
         // 使用 MenuProvider 替代旧 API
         addMenuProvider(object : MenuProvider {
@@ -158,7 +145,7 @@ class WebActivity : BaseActivity<WebViewModel, ActivityWebBinding>() {
                     }
 
                     R.id.web_refresh -> {
-                        mAgentWeb?.urlLoader?.reload(); true
+                        webView.reload(); true
                     }
 
                     R.id.web_collect -> {
@@ -178,22 +165,66 @@ class WebActivity : BaseActivity<WebViewModel, ActivityWebBinding>() {
             }
         }, this) // 生命周期绑定
 
-        preWeb = AgentWeb.with(this)
-            .setAgentWebParent(mBind.webContent, LinearLayout.LayoutParams(-1, -1))
-            .useDefaultIndicator()
-            .interceptUnkownUrl()
-            .createAgentWeb()
-            .ready()
-        //加载网页
-        mAgentWeb = preWeb?.go(mViewModel.url)
+
+    }
+
+    private fun initWebView() {
+        webView = WebView(this)
+        mBind.webContent.addView(webView)
+
+        // 配置WebView设置
+        val webSettings = webView.settings
+        webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
+        webSettings.allowFileAccess = true
+        webSettings.setSupportZoom(true)
+        webSettings.builtInZoomControls = true
+        webSettings.displayZoomControls = false
+        webSettings.loadsImagesAutomatically = true
+        webSettings.defaultTextEncodingName = "utf-8"
+        webSettings.useWideViewPort = true
+        webSettings.loadWithOverviewMode = true
+
+        // 设置WebViewClient，使链接在WebView内打开
+        webView.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+                view.loadUrl(request.url.toString())
+                return true
+            }
+        }
+
+        // 设置WebChromeClient，处理进度和标题
+        webView.webChromeClient = object : WebChromeClient() {
+            override fun onProgressChanged(view: WebView, newProgress: Int) {
+                // 可以在这里添加进度条逻辑
+            }
+        }
+
+        // 加载URL
+        mViewModel.url.takeIf { it.isNotEmpty() }?.let {
+            webView.loadUrl(it)
+        }
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (mAgentWeb!!.handleKeyEvent(keyCode, event)) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
+            webView.goBack()
             return true
         }
         return super.onKeyDown(keyCode, event)
     }
+
+    override fun onDestroy() {
+        webView.apply {
+            loadDataWithBaseURL(null, "", "text/html", "utf-8", null)
+            clearHistory()
+            mBind.webContent.removeView(this)
+            destroy()
+        }
+        super.onDestroy()
+    }
+
+
     /**
      * 修改收藏的状态
      */
@@ -266,18 +297,14 @@ class WebActivity : BaseActivity<WebViewModel, ActivityWebBinding>() {
     }
 
     override fun onPause() {
-        mAgentWeb?.webLifeCycle?.onPause()
+
         super.onPause()
     }
 
     override fun onResume() {
-        mAgentWeb?.webLifeCycle?.onResume()
+
         super.onResume()
     }
 
-    override fun onDestroy() {
-        mAgentWeb?.webLifeCycle?.onDestroy()
-        super.onDestroy()
-    }
 
 }

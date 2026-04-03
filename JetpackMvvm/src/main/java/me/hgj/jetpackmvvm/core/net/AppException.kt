@@ -1,8 +1,7 @@
 package me.hgj.jetpackmvvm.core.net
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/9/24
+ *
  * 说明　：
  */
 class AppException : Exception {

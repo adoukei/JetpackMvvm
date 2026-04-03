@@ -7,16 +7,12 @@ import me.hgj.jetpackmvvm.core.data.ApiResult
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseArticleListFragment
 import me.hgj.jetpackmvvm.demo.app.core.ext.init
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.data.model.entity.ApiPagerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.ArticleResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.BannerParentResponse
 import me.hgj.jetpackmvvm.demo.data.vm.HomeViewModel
-import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
 
 /**
- * 作者　: hegaojian
- * 时间　: 2019/12/27
  * 描述　:
  */
 class HomeFragment : BaseArticleListFragment<HomeViewModel, ArticleResponse>() {
@@ -43,7 +39,7 @@ class HomeFragment : BaseArticleListFragment<HomeViewModel, ArticleResponse>() {
             setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.home_search -> {
-                        nav().navigate(MainFragmentDirections.toSearchFragment())
+
                     }
                 }
                 true

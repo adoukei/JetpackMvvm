@@ -23,10 +23,7 @@ import android.view.accessibility.AccessibilityManager
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
 
-/**
- * Created by luyao
- * on 2019/7/9 9:17
- */
+
 
 /**
  * Return system service which type is [T]

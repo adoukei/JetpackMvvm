@@ -13,11 +13,6 @@ import kotlinx.coroutines.cancel
 import me.hgj.jetpackmvvm.databinding.LayoutBaseLoadingViewBinding
 import java.util.WeakHashMap
 
-/**
- * 作者　: hegaojian
- * 时间　: 2020/11/18
- * 描述　:
- */
 
 /**
  * 显示消息弹窗

@@ -22,8 +22,7 @@ import me.hgj.jetpackmvvm.ext.view.textString
 import me.hgj.jetpackmvvm.ext.view.visibleOrInvisible
 
 /**
- * 作者　：hegaojian
- * 时间　：2025/10/10
+ *
  * 说明　：
  */
 class LoginActivity : BaseActivity<UserViewModel, ActivityLoginBinding>() {

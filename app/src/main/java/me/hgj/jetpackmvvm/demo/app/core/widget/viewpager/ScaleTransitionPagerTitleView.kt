@@ -7,7 +7,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.ColorT
 /**
  * 带颜色渐变和缩放的指示器标题
  * 博客: http://hackware.lucode.net
- * Created by hackware on 2016/6/26.
  */
 class ScaleTransitionPagerTitleView(context: Context) : ColorTransitionPagerTitleView(context) {
 

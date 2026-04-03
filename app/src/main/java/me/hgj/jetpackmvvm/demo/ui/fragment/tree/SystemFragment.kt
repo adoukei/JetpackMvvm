@@ -7,7 +7,6 @@ import com.drake.brv.utils.setup
 import me.hgj.jetpackmvvm.core.data.ApiResult
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseListFragment
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.core.util.LocalDataUtil
 import me.hgj.jetpackmvvm.demo.data.model.entity.ClassifyResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.SystemResponse
@@ -15,7 +14,6 @@ import me.hgj.jetpackmvvm.demo.data.vm.TreeViewModel
 import me.hgj.jetpackmvvm.demo.databinding.FlowLayoutBinding
 import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemSystemBinding
-import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
 import me.hgj.jetpackmvvm.ext.util.toHtml
 import me.hgj.jetpackmvvm.ext.view.divider
 import me.hgj.jetpackmvvm.ext.view.flex
@@ -23,8 +21,6 @@ import me.hgj.jetpackmvvm.ext.view.vertical
 import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/3
  * 描述　: 体系
  */
 class SystemFragment : BaseListFragment<TreeViewModel, IncludeRecyclerviewBinding,SystemResponse>() {
@@ -63,12 +59,7 @@ class SystemFragment : BaseListFragment<TreeViewModel, IncludeRecyclerviewBindin
                             val index = parentModels.indexOfFirst { it.id == model.parentChapterId }
                             if(index == -1) return@onClick
                             val parentModel = this@outSetup.models?.get(index) as SystemResponse
-                            nav().navigate(
-                                MainFragmentDirections.toSystemArrFragment(
-                                    parentModel,
-                                    modelPosition
-                                )
-                            )
+
                         }
                     }
                 }

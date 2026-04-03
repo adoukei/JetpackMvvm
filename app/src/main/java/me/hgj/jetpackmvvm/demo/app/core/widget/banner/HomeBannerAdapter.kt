@@ -1,10 +1,5 @@
 package me.hgj.jetpackmvvm.demo.app.core.widget.banner
 
-/**
- * 作者　: hegaojian
- * 时间　: 2020/2/20
- * 描述　:
- */
 
 import android.widget.ImageView
 import com.zhpan.bannerview.BaseBannerAdapter

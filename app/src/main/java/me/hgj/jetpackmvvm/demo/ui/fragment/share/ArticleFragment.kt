@@ -6,27 +6,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.drake.brv.utils.setup
 import me.hgj.jetpackmvvm.core.data.ApiResult
 import me.hgj.jetpackmvvm.core.data.obs
-import me.hgj.jetpackmvvm.demo.MainNavigationDirections
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BasePageListFragment
-import me.hgj.jetpackmvvm.demo.app.core.ext.nav
 import me.hgj.jetpackmvvm.demo.app.event.EventViewModel
 import me.hgj.jetpackmvvm.demo.data.model.entity.ApiPagerResponse
 import me.hgj.jetpackmvvm.demo.data.model.entity.ArticleResponse
-import me.hgj.jetpackmvvm.demo.data.model.entity.BannerResponse
 import me.hgj.jetpackmvvm.demo.data.vm.ShareViewModel
 import me.hgj.jetpackmvvm.demo.databinding.IncludeRecyclerviewBinding
 import me.hgj.jetpackmvvm.demo.databinding.ItemShareAriticleBinding
 import me.hgj.jetpackmvvm.demo.ui.activity.WebActivity
-import me.hgj.jetpackmvvm.demo.ui.fragment.MainFragmentDirections
 import me.hgj.jetpackmvvm.ext.view.divider
 import me.hgj.jetpackmvvm.ext.view.showDialogMessage
 import me.hgj.jetpackmvvm.ext.view.vertical
 import me.hgj.jetpackmvvm.util.decoration.DividerOrientation
 
 /**
- * 作者　: hegaojian
- * 时间　: 2020/3/2
  * 描述　: 我分享的文章
  */
 class ArticleFragment : BasePageListFragment<ShareViewModel, IncludeRecyclerviewBinding,ArticleResponse>() {
@@ -44,7 +38,7 @@ class ArticleFragment : BasePageListFragment<ShareViewModel, IncludeRecyclerview
             setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.todo_add -> {
-                        nav().navigate(MainFragmentDirections.toAddArticleFragment())
+
                     }
                 }
                 true
