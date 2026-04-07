@@ -28,7 +28,7 @@ class HomeViewModel : BaseViewModel() {
      */
     fun getHomeData(isRefresh: Boolean, loadingXml: Boolean = false) = request {
         if (isRefresh) {
-            //是刷新 玩Android的这个接口pageIndex 是0 开始
+            //是刷新 的这个接口pageIndex 是0 开始
             pageIndex = 0
         }
         onRequest {

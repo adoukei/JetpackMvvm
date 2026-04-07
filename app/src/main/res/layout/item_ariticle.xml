@@ -96,7 +96,7 @@
         android:textColor="@color/primary_text"
         android:textSize="14sp"
         android:textStyle="bold"
-        tools:text="这是一个根据JetpackMvvm框架开发玩Android的一个APP" />
+        tools:text="这是一个根据JetpackMvvm框架开发的一个APP" />
 
     <RelativeLayout
         android:layout_width="match_parent"

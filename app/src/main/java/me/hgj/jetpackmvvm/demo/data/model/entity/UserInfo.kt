@@ -1,6 +1,6 @@
 package me.hgj.jetpackmvvm.demo.data.model.entity
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 /**
  * 描述　: 账户信息

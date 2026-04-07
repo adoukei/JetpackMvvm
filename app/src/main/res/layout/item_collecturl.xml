@@ -29,7 +29,7 @@
             android:textColor="@color/primary_text"
             android:textSize="14sp"
             android:textStyle="bold"
-            tools:text="玩Android 开放API-玩Android - wanandroid.com" />
+            tools:text="开放API" />
 
         <LinearLayout
             android:layout_width="match_parent"

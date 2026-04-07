@@ -3,7 +3,7 @@ package me.hgj.jetpackmvvm.demo.data.model.entity
 import me.hgj.jetpackmvvm.util.BasePage
 
 /**
- * 描述　: 玩Android 服务器返回的列表数据基类
+ * 描述　:  服务器返回的列表数据基类
  */
 data class ApiPagerResponse<T>(
     var datas: ArrayList<T>,

@@ -4,6 +4,7 @@ autosize = "v1.2.1"
 customactivityoncrash = "2.4.0"
 flexbox = "2.0.1"
 glide = "5.0.5"
+kotlin = "2.3.20"
 coreKtx = "1.18.0"
 appcompat = "1.7.1"
 retrofit = "3.0.0"
@@ -16,19 +17,19 @@ kotlinxCoroutinesAndroid = "1.10.2"
 lifecycleLivedataKtx = "2.10.0"
 
 gson = "2.13.2"
-ksp = "2.3.4"
+ksp = "2.3.6"
 banner = "3.5.17"
 mmkv = "2.4.0"
 lottie = "6.7.1"
 okhttp = "5.3.2"
-refreshLayout = "2.1.1"
-rxhttp = "3.5.0"
+refreshLayout = "3.0.0-alpha"
+rxhttp = "3.5.1"
 swiperefreshlayout = "1.1.0"
 unpeekLivedata = "7.8.0"
 dialog =  "3.3.0"
 immersionbar =  "3.2.2"
-permissions =  "26.5"
-brv = "1.5.8"
+permissions =  "28.2"
+brv = "1.6.1"
 backgroundlibrary = "1.7.6"
 spannable = "1.2.7"
 
@@ -75,6 +76,7 @@ spannable = { module = "com.github.liangjingkanji:spannable", version.ref = "spa
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-parcelize = { id = "kotlin-parcelize" }
 maven-publish = { id = "maven-publish" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

@@ -85,7 +85,7 @@
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
-                <com.noober.background.view.BLCheckBox
+                <CheckBox
                     android:id="@+id/pwdVisible"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
@@ -98,7 +98,7 @@
 
             </LinearLayout>
 
-            <com.noober.background.view.BLButton
+            <Button
                 android:id="@+id/loginSub"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -118,7 +118,7 @@
                 android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
-                <com.noober.background.view.BLImageView
+                <ImageView
                     android:id="@+id/agreement"
                     android:layout_width="18dp"
                     android:layout_height="18dp"

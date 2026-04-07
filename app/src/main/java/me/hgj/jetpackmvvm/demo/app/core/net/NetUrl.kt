@@ -8,7 +8,7 @@ import rxhttp.wrapper.annotation.DefaultDomain
  */
 object NetUrl {
 
-    /** 代表请求成功的 code值， 这里写0 是因为 玩Android 后端成功状态为0 */
+    /** 代表请求成功的 code值， 这里写0 */
     const val SUCCESS_CODE = 0
 
     /** 登录过期code值 */

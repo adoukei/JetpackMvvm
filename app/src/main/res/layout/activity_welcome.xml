@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <com.noober.background.view.BLTextView
+    <TextView
         android:id="@+id/welcomeJoin"
         app:bl_corners_radius="8dp"
         app:bl_solid_color="@color/colorPrimaryDark"

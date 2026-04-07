@@ -1,13 +1,11 @@
 package me.hgj.jetpackmvvm.demo.data.model.entity
 
-import android.annotation.SuppressLint
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 /**
  * 文章
  */
-@SuppressLint("ParcelCreator")
 @Parcelize
 data class ArticleResponse(
     var apkLink: String,
