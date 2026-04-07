@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
 
-    <com.noober.background.view.BLView
+    <TextView
         android:id="@+id/dialog_confirm"
         android:layout_width="0dp"
         android:layout_height="40dp"

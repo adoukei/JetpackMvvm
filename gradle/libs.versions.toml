@@ -64,7 +64,7 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 rxhttp = { module = "com.github.liujingxing.rxhttp:rxhttp", version.ref = "rxhttp" }
 rxhttp-compiler = { module = "com.github.liujingxing.rxhttp:rxhttp-compiler", version.ref = "rxhttp" }
 unpeek-livedata = { module = "com.kunminx.arch:unpeek-livedata", version.ref = "unpeekLivedata" }
-backgroundlibrary-library = { module = "com.github.JavaNoober.BackgroundLibrary:library", version.ref = "backgroundlibrary" }
+backgroundlibrary-library = { module = "com.github.JavaNoober.BackgroundLibrary:libraryx", version.ref = "backgroundlibrary" }
 brv = { module = "com.github.liangjingkanji:BRV", version.ref = "brv" }
 dialog = { module = "com.afollestad.material-dialogs:core", version.ref = "dialog" }
 dialog-bootomsheets = { module = "com.afollestad.material-dialogs:bottomsheets", version.ref = "dialog" }
