@@ -2,7 +2,7 @@ package me.hgj.jetpackmvvm.demo.data.model.entity
 
 import android.annotation.SuppressLint
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 /**
  * 收藏的网址类

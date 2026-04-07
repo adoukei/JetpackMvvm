@@ -16,7 +16,7 @@ android {
         versionName = "2.0.3"
         multiDexEnabled = true
         ndk {
-            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a"))
+            abiFilters.addAll(listOf("arm64-v8a"))
         }
     }
     buildFeatures {
