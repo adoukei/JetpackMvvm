@@ -122,9 +122,9 @@ object NetUrl {
 
     object Agreement{
         /** 服务协议 */
-        const val TERMS_OF_SERVICE = "https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201"
+        const val TERMS_OF_SERVICE = "https://www.baidu.com/"
         /** 隐私政策 */
-        const val PRIVACY_POLICY = "https://rule.tencent.com/rule/46a15f24-e42c-4cb6-a308-2347139b1201"
+        const val PRIVACY_POLICY = "https://www.baidu.com/"
     }
 
 

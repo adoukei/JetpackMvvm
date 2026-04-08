@@ -49,14 +49,16 @@ android {
         }
     }
 
-    kotlin {
-        jvmToolchain(17) // 自动设置 Java 17 兼容性
-    }
+
 
     lint {
         abortOnError = false
         checkReleaseBuilds = false
     }
+}
+
+kotlin {
+    jvmToolchain(17) // 自动设置 Java 17 兼容性
 }
 
 dependencies {
@@ -71,11 +73,8 @@ dependencies {
 
     //项目核心框架
     implementation(project(":JetpackMvvm"))
-//    implementation(libs.jetpackmvvm)
 
-    //网络请求，JetpackMvvm 框架不再内置引入网络框架，大家可以自行选择Retrofit或者其他优秀的第三方网络框架 比如RxHttp，Net等
     //================================网络框架 sart ===========================//
-
     // rxhttp示例引入((demo.app.core.net.rxhttp 包中))
     implementation(libs.okhttp) //必须
     implementation(libs.rxhttp)
@@ -86,7 +85,7 @@ dependencies {
     implementation(libs.converter.gson)
     //================================网络框架 end ===========================//
 
-    //================================demo项目相关使用到的库 sart ===========================//
+    //================================项目相关使用到的库 sart ===========================//
     implementation(libs.dialog.bootomsheets)
     //轮播图
     implementation(libs.banner)
@@ -100,5 +99,5 @@ dependencies {
     implementation(libs.customactivityoncrash)
     //富文本工具
     implementation(libs.spannable)
-    //================================demo项目相关使用到的库 end ===========================//
+    //================================项目相关使用到的库 end ===========================//
 }

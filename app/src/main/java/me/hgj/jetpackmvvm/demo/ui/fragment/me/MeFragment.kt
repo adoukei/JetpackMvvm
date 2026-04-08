@@ -4,7 +4,6 @@ import android.os.Bundle
 import me.hgj.jetpackmvvm.core.data.obs
 import me.hgj.jetpackmvvm.demo.R
 import me.hgj.jetpackmvvm.demo.app.core.base.BaseFragment
-import me.hgj.jetpackmvvm.demo.app.core.ext.joinQQGroup
 import me.hgj.jetpackmvvm.demo.app.core.ext.onRefresh
 import me.hgj.jetpackmvvm.demo.app.core.util.LocalDataUtil
 import me.hgj.jetpackmvvm.demo.app.core.util.UserManager
@@ -50,26 +49,8 @@ class MeFragment : BaseFragment<UserViewModel, FragmentMeBinding>() {
         mBind.topLayout.clickNoRepeat {
 
         }
-        mBind.integralLayout.clickNoRepeat {
-            //我的积分
 
-        }
-        mBind.collectLayout.clickNoRepeat {
-            //我的收藏
 
-        }
-        mBind.articleLayout.clickNoRepeat {
-            //我的文章
-
-        }
-        mBind.urlLayout.clickNoRepeat {
-            //开源网站
-            WebActivity.start(title = "网站标题", url = "网站url")
-        }
-        mBind.joinLayout.clickNoRepeat {
-            //加入我们
-            joinQQGroup("这里是QQ群的key")
-        }
         mBind.settingLayout.clickNoRepeat {
             //设置
             openActivity<SettingActivity>()
@@ -90,8 +71,7 @@ class MeFragment : BaseFragment<UserViewModel, FragmentMeBinding>() {
             refreshIntegral()
         } else {
             mBind.userName.text = "请先登录~"
-            mBind.userInfo.text = "id：--　排名：--"
-            mBind.meIntegral.text = "0"
+            mBind.userInfo.text = "id："
         }
     }
 
@@ -104,8 +84,7 @@ class MeFragment : BaseFragment<UserViewModel, FragmentMeBinding>() {
         integralVm.getIntegralData().obs(viewLifecycleOwner) {
             onSuccess {
                 mBind.meSwipe.isRefreshing = false
-                mBind.userInfo.text = "id：${it.userId}　排名：${it.rank}"
-                mBind.meIntegral.text = it.coinCount.toString()
+                mBind.userInfo.text = "id：${it.userId}"
             }
             onError {
                 mBind.meSwipe.isRefreshing = false

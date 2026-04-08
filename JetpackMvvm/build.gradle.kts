@@ -39,7 +39,7 @@ dependencies {
     // 协程基础库
     api(libs.kotlinx.coroutines.core)
     api(libs.kotlinx.coroutines.android)
-    //lifecycle
+    // lifecycle
     api(libs.androidx.lifecycle.runtime.ktx)
     // viewModel
     api(libs.androidx.lifecycle.viewmodel.ktx)

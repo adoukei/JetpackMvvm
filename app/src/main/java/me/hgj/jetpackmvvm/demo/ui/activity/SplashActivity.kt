@@ -20,7 +20,6 @@ import me.hgj.jetpackmvvm.ext.view.visible
 import me.hgj.jetpackmvvm.ext.view.visibleOrGone
 
 
-@Suppress("DEPRECATED_IDENTITY_EQUALS")
 class SplashActivity : BaseActivity<BaseViewModel, ActivityWelcomeBinding>() {
 
     override val showTitle = false
@@ -38,8 +37,7 @@ class SplashActivity : BaseActivity<BaseViewModel, ActivityWelcomeBinding>() {
                 getColorExt(R.color.colorPrimary)
             )
         )
-        // 2. 设置导航栏颜色
-        window.navigationBarColor = getColorExt(R.color.colorPrimary)
+
         mViewPager = mBind.bannerView as BannerViewPager<String>
         PolicyUtil.showPolicyDialog(this) {
             if (isFirst) {
@@ -76,7 +74,7 @@ class SplashActivity : BaseActivity<BaseViewModel, ActivityWelcomeBinding>() {
         isFirst = false
         openActivity<MainActivity>()
         finish()
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out,)
     }
 
 
